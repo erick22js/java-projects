@@ -1,0 +1,9 @@
+import "sprite.ast"
+
+restrict tres 3
+restrict player 0x10
+
+dl %player, [0, 0]
+mov 60, r1
+
+mov 20, <Sprite>%player.x

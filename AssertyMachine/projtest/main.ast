@@ -1,0 +1,116 @@
+;Máquina virtual, escrito em "Asserty", pode executar até
+;17.000 instruções por tick, cerca de 500.000 por segundo
+
+;Mini-jogo escrito em asserty
+
+;*************************************
+;         PRESETS DE VALORES
+;*************************************
+
+define player_x   0x00100
+define player_y   0x00102
+define inputs     0x01000
+define input_W    0x01000
+define input_S    0x01001
+define input_A    0x01002
+define input_D    0x01003
+define input_SPC  0x01004
+mov 100, %player_x
+mov 100, %player_y
+mov 56, %122
+
+;*************************************
+;      DEFININDO PALETA E TELHA
+;*************************************
+bks 6
+mov 0b000001111100000, r1
+mov r1, %0x0
+mov %0x0, ax
+int 4
+bks 0
+int 12
+
+
+jmp %gameloop
+
+;*************************************
+;         ATUALIZAR O PLAYER
+;*************************************
+
+update_move_inputs:
+	bks 4
+	bkd 0
+	mov 0xf, r1
+	cdl %0x0, r1, %inputs
+	bks 4
+	bkd 0
+	ret
+
+update_move_player:
+	mov8 %input_D, r10
+	mul 16, r10
+	add r10, r1
+	mov8 %input_A, r10
+	mul 16, r10
+	sub r10, r1
+	mov8 %input_S, r10
+	mul 16, r10
+	add r10, r2
+	mov8 %input_W, r10
+	mul 16, r10
+	sub r10, r2
+	;mov %input_A, r10
+	jmp %update_move_player_end
+
+update_draw_player:
+	mov [r1-0x10], bx
+	mov [r2-0x10], cx
+	mov 0x20, dx
+	mov 0x20, ex
+	mov 0b000000000011111, ax
+	int 130
+	ret
+
+update_player:
+	mov %player_x, r1
+	mov %player_y, r2
+	call %update_move_inputs
+	jmp %update_move_player
+		update_move_player_end:
+	call %update_draw_player
+	mov r1, %player_x
+	mov r2, %player_y
+	ret
+
+;*************************************
+;      LOOP PRINCIPAL DE JOGO
+;*************************************
+
+vblankFX:
+	mov %122, r7
+	bks 9
+	mov r7, ax
+	int 32
+;	mov8 ax, %0
+	bks 0
+	inc r7
+	mov r7, %122
+	wai 177
+
+gameloop:
+;	Pintar plano de fundo
+;	Passar posição, tamanho e cor de fundo
+	mov 0, bx
+	mov 0, cx
+	mov 256, dx
+	mov 224, ex
+	mov 0b000001111100000, ax
+	int 130						;Pintar a tela
+	call %update_player
+	
+	mov vblankFX, ax
+	int 152
+	int 158
+	mov 0, %122
+	wai 0
+	jmp %gameloop

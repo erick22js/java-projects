@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Documentação Asserty</title>
+		</head>
+	<body>
+		<h1>O que é Asserty?</h1>
+		Asserty é uma linguaguem de programação
+		totalmente inspirada em Assembly. Ela
+		possuí pecularidades que a torna uma linguagem
+		distinta, e não, uma cópia, ou simples
+		paródia. Uma linguagem de 16-32bits.
+		<br>
+		<br>
+		<h2>Características</h2>
+		<li>Como qualquer linguagem, possuí seu
+		próprio compilador
+		<li>É executada em uma máquina virtual
+		<li>Permite acessar qualquer endereço na
+		memória (salvo algumas exceções)
+		<li>Não existe atribuição por variável,
+		o próprio desenvolvedor deve saber o que,
+		quando e onde está armazenando um valor.
+		<li>Pode lidar com referências utilizando
+		ponteiros
+		<li>Pode lidar com múltiplos valores 
+		simultâneos
+		<li>Possuí características Assembly, e outras
+		mudadas
+		<br>
+		<br>
+		<h2>Tipos de dados</h2>
+		Em Asserty existem, basicamente quatro tipos
+		de dados: literal, registro, memória e ponteiro.
+		<li>Valores literais são números diretamente
+		informados, ou seja, constantes, podem ser
+		representados de forma numérica ou substituídos por
+		uma constante pré-definida. Ex: 467, 0x56, 0b10, 05
+		ou alguma constante pré-definida qualquer. Possuí 16 bits.
+		<li>Registros são nomes pré-armazenados que configuram
+		acesso a um valor interno armazenado. Ex: r1 e inp. Possuí 8 bits.
+		<li>Memória é um endereço específico para a memória, ela é
+		representada por um "%" e em seguida um literal informando a
+		localização. Exemplo: %10, %0x8, %(o nome de alguma constante). Possuí 32 bits.
+		<li>Ponteiro, representado por um registro, aponta para um endereço
+		no código por meio do valor do registro especifícado, também precedido
+		por "%". Ex: %r1 e %ax. Possuí 8 bits.
+		<br>
+		Além destes, há um tipo exclusivo de dado
+		chamado "expressão", como diz o nome, expressão
+		é um cálculo interno realizado entre literais e/ou
+		registros, pode ter tamanho variado, e poucas
+		instruções fazendo seu uso, sendo as principais. Ex:
+		[56+r3*8-1]. NOTA IMPORTÂNTISSIMA: O cálculo é
+		linearmente empilhado, isso significa que, o cálculo
+		sempre será realizado da esquerda para direita não
+		importando o sinal.
+		<br>
+		<br>
+		<br>
+		<h2>Registros</h2>
+		Ao todo, são 24 registros, incluindo desde 
+		registros para estado de máquina: "inp", "stp" e
+		"stt"; registros de operações: "acu" e "dls";
+		registros para contexto geral: "r0", "r1", "r2", "r3",
+		"r4", "r5", "r6", "r7", "r8", "r9", "r10", "r11" e "r12"; ou
+		registros para parâmetros: "ax", "bx", "cx", "dx", "ex" e
+		"fx".
+		<br>
+		O registro "inp" armazena a posição de leitura no
+		código atualmente.
+		<br>
+		O registro "stp" armazena a posição da pilha
+		<br>
+		O registro "dls" armazena a quantidade de bytes
+		ocupados na última declaração de multi-valores na
+		memória (ao definir um lista na memória, seu tamanho
+		é informado neste registro).
+		<br>
+		Ponteiro basicamente provém valores em 16 bits,
+		mas internamente, armazenam 32 bits, para permitir
+		acessos a endereços na memória. Cálculos realizados
+		com endereços armazenam valores 32 bits.
+		<br>
+		<br>
+		<h2>Definindo constantes</h2>
+		Constantes são valores imutáveis, e que não podem
+		ser reatribuídos, são formas de referenciar a um
+		valor por uma identificação facilmente reconhecível.
+		E há duas formas de declarar constantes em Asserty,
+		direta e indiretamente, confira:
+		<br>
+		<h3>Indiretamente</h3>
+		A maneira mais simples e mais útil para se declarar
+		e utilizar uma constante. Basta inserir um nome
+		interessante, e logo em seguida dois pontos.<br>
+		Ex: inicio:<br>
+		Deste modo, o endereço no código onde se encontra
+		esta etiqueta é automaticamente atribuído á ele,
+		isso é extremamente útil para funções que pulam
+		para pontos específicos no código.
+		<br>
+		<h3>Diretamente</h3>
+		Outra forma de atribuir constantes, este permite
+		que o programador especifíque o valor, há dois
+		tipos de constantes acessíveis no código: global
+		e restrito, constantes globais podem ser acessados
+		em qualquer parte de código em qualquer documento,
+		enquanto restritos, como diz o nome, são restritos
+		somente ao documento onde foram declarados e aos
+		seus sub-documentos importados.
+		Para definir uma constante global, utiliza-se a
+		palavra reservada "define", o mesmo, para o outro,
+		porém trocando por "restrict".
+		<br>
+		<br>
+		<h2>Dados em lista</h2>
+		Listas são declaradas como uma série de valores do
+		mesmo tipo, no caso, devem ser literais, em forma
+		de conjunto de valores: [10, 50, 0x8, 5], ou um
+		conjunto de caracteres: "Como esse por exemplo"
+		depois convertidos em códigos, para declarar uma
+		lista, utiliza-se dl (ou dl8, ou dl32, cada um
+		define o tamanho de dado, dl é 16 bits), depois
+		memória ou ponteiro indicando a partir de onde
+		armazenar. <br>
+		Exemplo: dl8 %0xf0, "Nome"<br>
+		Após isso,
+		um valor indicando o tamanho total armazenado em
+		bytes no registro "dls".
+		<br>
+		<br>
+		<h2>Extruturas</h2>
+		Extrutura é uma forma de facilitar a leitura
+		de código e melhorar a legibilidade permitindo acesso
+		a pontos de memória no código por meio de convenções
+		internas, por exemplo, criar vários objetos e referir
+		a propriedade de cada um (sendo eles de extruturas
+		semelhantes) é muito mais fácil utilizando extruturas.
+		<br>
+		Extruturas são declaradas utilizando a palavra reservada
+		"struct" e um nome para extrutura, inicia um excopo
+		entre chaves, e tudo adentro, é uma chave contendo índice
+		de deslocamento. Veja um exemplo:
+		<br>
+		<input disabled="disabled" value="
+struct Sprite{
+	x: 0
+	y: 2
+	width: 4
+	height: 6
+}
+		" style="width:80%; height:100px; white-space:pre; overflow:scroll;"></input>
+		<br>
+		Para acessar um índice na memória, deve-se específicar
+		um índice para o objeto, e a extrutura base com a
+		propriedade. Por exemplo, digamos tenho um sprite
+		na memória ram (suas propriedades), o índice base onde
+		fora armazenado foi em 0x10, para obter a largura dele,
+		bastaria acessar o endereço na memória da seguinte forma:
+		<br>
+		&#60Sprite&#62 0x10.width
+		<br>
+		Isto é um dado do tipo Memória.
+	</body>
+</html>
