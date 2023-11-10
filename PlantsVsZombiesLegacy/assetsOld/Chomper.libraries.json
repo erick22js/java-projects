@@ -1,0 +1,93 @@
+{
+	"Chomper_groundleaf2":{
+		"libraryItemName":"Chomper_groundleaf2",
+		"scaleX": 0.79998779296875,
+		"scaleY": 0.79998779296875,
+		"pX": 0,
+		"pY": 0
+	},
+	"Chomper_groundleaf2":{
+		"libraryItemName":"Chomper_groundleaf2",
+		"scaleX": 0.79998779296875,
+		"scaleY": 0.79998779296875,
+		"pX": 0,
+		"pY": 0
+	},
+	"Chomper_groundleaf1tip":{
+		"libraryItemName":"Chomper_groundleaf1tip",
+		"scaleX": 0.79998779296875,
+		"scaleY": 0.79998779296875,
+		"pX": 0,
+		"pY": 0
+	},
+	"Chomper_groundleaf1":{
+		"libraryItemName":"Chomper_groundleaf1",
+		"scaleX": 0.79998779296875,
+		"scaleY": 0.79998779296875,
+		"pX": 0,
+		"pY": 0
+	},
+	"Chomper_bottomlip":{
+		"libraryItemName":"Chomper_bottomlip",
+		"scaleX": 0.79998779296875,
+		"scaleY": 0.79998779296875,
+		"pX": 0,
+		"pY": 0
+	},
+	"Zombie_outerarm_lower":{
+		"libraryItemName":"Zombie_outerarm_lower",
+		"scaleX": 1,
+		"scaleY": 1,
+		"pX": 0,
+		"pY": 0
+	},
+	"Zombie_outerarm_hand":{
+		"libraryItemName":"Zombie_outerarm_hand",
+		"scaleX": 0.79998779296875,
+		"scaleY": 0.79998779296875,
+		"pX": 0,
+		"pY": 0
+	},
+	"Tween 3":{
+		"libraryItemName":"Chomper_insidemouth",
+		"scaleX": 0.79998779296875,
+		"scaleY": 0.79998779296875,
+		"pX": -14.4,
+		"pY": -12.4
+	},
+	"Tween 4":{
+		"libraryItemName":"Chomper_insidemouth",
+		"scaleX": 0.79998779296875,
+		"scaleY": 0.79998779296875,
+		"pX": -14.4,
+		"pY": -12.4
+	},
+	"Tween 5":{
+		"libraryItemName":"",
+		"scaleX": 1,
+		"scaleY": 1,
+		"pX": 0,
+		"pY": 0
+	},
+	"Tween 6":{
+		"libraryItemName":"",
+		"scaleX": 1,
+		"scaleY": 1,
+		"pX": 0,
+		"pY": 0
+	},
+	"Tween 7":{
+		"libraryItemName":"",
+		"scaleX": 1,
+		"scaleY": 1,
+		"pX": 0,
+		"pY": 0
+	},
+	"Tween 8":{
+		"libraryItemName":"",
+		"scaleX": 1,
+		"scaleY": 1,
+		"pX": 0,
+		"pY": 0
+	}
+}

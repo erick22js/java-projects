@@ -1,0 +1,205 @@
+{
+    "Zombie_outerarm_hand": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Zombie_outerarm_hand.png",
+        "x": 0,
+        "y": 0
+    },
+    "Tween 3": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_insidemouth.png",
+        "x": -14.4,
+        "y": -12.4
+    },
+    "Tween 4": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_insidemouth.png",
+        "x": -14.4,
+        "y": -12.4
+    },
+    "Tween 1": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_underjaw.png",
+        "x": -19.2,
+        "y": -21.2
+    },
+    "Tween 2": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_underjaw.png",
+        "x": -19.2,
+        "y": -21.2
+    },
+    "Groundleaf_3": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_groundleaf3.png",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_Headleaf2": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_Headleaf2.png",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_Headleaf1": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_Headleaf1.png",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_tongue": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_tongue.png",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_Headleaf4": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_Headleaf4.png",
+        "x": 0,
+        "y": 0
+    },
+    "Locator": {
+        "scaleX": 1,
+        "scaleY": 1,
+        "src": "",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_Headleaf3": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_Headleaf3.png",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_bottomlip": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_bottomlip.png",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_groundleaf2tip": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_groundleaf2tip.png",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_groundleaf1": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_groundleaf1.png",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_groundleaf4": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_groundleaf4.png",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_groundleaf2": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_groundleaf2.png",
+        "x": 0,
+        "y": 0
+    },
+    "Zombie_outerarm_lower": {
+        "scaleX": 1,
+        "scaleY": 1,
+        "src": "Zombie_outerarm_lower.png",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_spike": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_spike.png",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_topjaw": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_topjaw.png",
+        "x": 0,
+        "y": 0
+    },
+    "Tween 7": {
+        "scaleX": 1,
+        "scaleY": 1,
+        "src": "",
+        "x": 0,
+        "y": 0
+    },
+    "Tween 8": {
+        "scaleX": 1,
+        "scaleY": 1,
+        "src": "",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_stem1": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_stem1.png",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_stomach": {
+        "scaleX": 0.69999695,
+        "scaleY": 0.69999695,
+        "src": "Chomper_stomach.png",
+        "x": 0,
+        "y": 0
+    },
+    "Tween 5": {
+        "scaleX": 1,
+        "scaleY": 1,
+        "src": "",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_groundleaf1tip": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_groundleaf1tip.png",
+        "x": 0,
+        "y": 0
+    },
+    "Tween 6": {
+        "scaleX": 1,
+        "scaleY": 1,
+        "src": "",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_stem3": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_stem3.png",
+        "x": 0,
+        "y": 0
+    },
+    "Chomper_stem2": {
+        "scaleX": 0.7999878,
+        "scaleY": 0.7999878,
+        "src": "Chomper_stem2.png",
+        "x": 0,
+        "y": 0
+    }
+}
