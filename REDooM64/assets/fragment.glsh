@@ -1,0 +1,11 @@
+precision mediump float;
+
+uniform sampler2D textura;
+
+varying vec4 color;
+varying vec2 uv;
+
+void main(){
+	vec4 frag = texture2D(textura, uv);
+	gl_FragColor = frag*color;
+}

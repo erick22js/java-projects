@@ -1,0 +1,21 @@
+attribute vec3 a_position;
+attribute vec4 a_color;
+attribute vec2 a_uv;
+attribute vec2 n_position;
+
+uniform mat4 proj_matrix;
+uniform mat4 global_matrix;
+uniform mat4 object_matrix;
+
+varying vec4 color;
+varying vec2 uv;
+
+void main(){
+	gl_Position = proj_matrix*vec4(a_position, 1.0);
+	//gl_Position.x = n_position.x;
+	//gl_Position.y = n_position.y;
+	//gl_Position.z = 0;
+	//gl_Position.w = 1.0;
+	color = a_color;
+	uv = a_uv;
+}
