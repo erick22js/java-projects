@@ -1,0 +1,14 @@
+#version 330
+
+layout (location = 0) in vec3 position;
+layout (location = 1) in vec3 corlox;
+layout (location = 2) in vec2 uvs_texture;
+
+out vec2 uvTex;
+uniform float valor;
+
+void main(){
+	vec3 np = vec3(position.x+valor, position.y, position.z);
+	gl_Position = vec4(np, 1);
+	uvTex = uvs_texture;//(position+1)*.5;
+}

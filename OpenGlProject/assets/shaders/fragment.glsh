@@ -1,0 +1,14 @@
+#version 330
+
+
+in vec2 uvTex;
+
+uniform float valor;
+
+out vec4 fragColor;
+
+uniform sampler2D e;
+
+void main(){
+	fragColor = texture(e, uvTex);//vec4(coloring.x, coloring.y, 0,1);
+}
