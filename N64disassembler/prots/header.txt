@@ -1,0 +1,11 @@
+[ROM INFO]
+
+byte_swap = false
+compreessed = false
+game_address = 0x80100400
+crc1 = 0xe402430d
+crc2 = 0xd2fcfc9d
+image_name = Diddy Kong Racing   
+manufaturer = 78
+id = 4459
+region = USA
